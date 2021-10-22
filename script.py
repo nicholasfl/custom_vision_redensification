@@ -36,6 +36,7 @@ if uploaded_file is not None:
         for prediction in response['predictions']:
 
             if(prediction['probability'] > 0.8):
+                # 0.8 is the confidence paramter, can be adjusted from 0 to 1 to increase/decrease the amount of boxes that are drawn
 
                 left = prediction['boundingBox']['left']
                 top = prediction['boundingBox']['top']
